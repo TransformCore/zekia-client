@@ -1,0 +1,74 @@
+{
+  "name": "et-cloud-carbon-info-app-auth0",
+  "private": true,
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/react-native": "^0.67.6",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "auth-utils": "^1.0.0",
+    "concurrently": "^7.0.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^7.32.0",
+    "fs-extra": "^10.0.0",
+    "lerna": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "sonar-scanner": "^3.1.0",
+    "ts-node": "^10.4.0"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.38",
+    "@types/express-serve-static-core": "^4.17.21",
+    "@grpc/grpc-js": "^1.4.6",
+    "@types/eslint": "^8.2.1",
+    "google-auth-library": "^7.11.0",
+    "@babel/core": "~7.16.7"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "use-install-start": "nvm use node && yarn install && yarn start-with-mock-data",
+    "clean": "lerna clean --yes",
+    "lint": "lerna run lint",
+    "start": "concurrently \"yarn start-client\" \"yarn start-api\"",
+    "start-with-mock-data": "yarn workspace @cloud-carbon-footprint/client-template start-with-mock-data",
+    "start-client": "yarn workspace @cloud-carbon-footprint/client-template start",
+    "start-api": "yarn workspace @cloud-carbon-footprint/api-template start",
+    "start-cli": "yarn workspace @cloud-carbon-footprint/cli-template start",
+    "test": "lerna run test -- --coverage",
+    "guided-install": "cd packages/cli && yarn guided-install",
+    "create-lookup-table": "yarn workspace @cloud-carbon-footprint/cli create-lookup-table",
+    "estimate-on-premise-data": "yarn workspace @cloud-carbon-footprint/cli estimate-on-premise-data"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^1.10.1",
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-syntax-flow": "^7.16.7",
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "ajv": "^8.11.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.12",
+    "react": "^17.0",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^17.0",
+    "react-native": "^0.68.1",
+    "react-native-web": "^0.17.7",
+    "react-router-dom": "^5.0",
+    "react-scripts": "^5.0.1",
+    "reactstrap": "^8.0",
+    "typescript": "^4.6.3"
+  },
+  "description": "et-cloud-carbon-info-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "bbandla",
+  "license": "ISC"
+}

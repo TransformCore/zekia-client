@@ -1,0 +1,289 @@
+2022-04-29T13:04:34.732Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T13:06:54.298Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T13:11:05.351Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:11:05.359Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:11:05.359Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:11:05.364Z [cache] info: Using local cache file... 
+2022-04-29T13:11:07.229Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:27.289Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:27.292Z [cache] info: Using local cache file... 
+2022-04-29T13:12:27.291Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:12:27.291Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:12:27.397Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:12:27.397Z [cache] info: Using local cache file... 
+2022-04-29T13:12:27.397Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:12:27.398Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:29.773Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:30.432Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:30.434Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:12:30.434Z [cache] info: Using local cache file... 
+2022-04-29T13:12:30.434Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:12:32.201Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:52.884Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:12:52.886Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:12:52.886Z [cache] info: Using local cache file... 
+2022-04-29T13:12:52.886Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:12:54.131Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:17:46.154Z [api] info: Recommendations API request started 
+2022-04-29T13:17:46.156Z [api] info: Footprint API request started with Start Date: 2022-03-29 and End Date: 2022-04-29 
+2022-04-29T13:17:46.156Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:17:46.157Z [cache] info: Ignoring cache... 
+2022-04-29T13:17:50.989Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:17:50.990Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:17:50.991Z [cache] info: Using local cache file... 
+2022-04-29T13:17:50.990Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:17:52.237Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:29:42.065Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:29:42.068Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:29:42.068Z [cache] info: Using local cache file... 
+2022-04-29T13:29:42.068Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:29:43.152Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:33:38.936Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:33:38.938Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:33:38.938Z [cache] info: Using local cache file... 
+2022-04-29T13:33:38.938Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:33:40.214Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:55:15.027Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:55:15.030Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:55:15.031Z [cache] info: Using local cache file... 
+2022-04-29T13:55:15.030Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:55:15.289Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:55:15.290Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:55:15.290Z [cache] info: Using local cache file... 
+2022-04-29T13:55:15.290Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:55:16.084Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:55:17.208Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:55:58.947Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:55:58.948Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:55:58.948Z [cache] info: Using local cache file... 
+2022-04-29T13:55:58.948Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:56:00.013Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:56:51.195Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:56:51.197Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:56:51.197Z [cache] info: Using local cache file... 
+2022-04-29T13:56:51.197Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:56:52.284Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:59:00.349Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T13:59:07.510Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:59:07.523Z [cache] info: Using local cache file... 
+2022-04-29T13:59:07.517Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:59:07.517Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:59:07.528Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:59:07.544Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:59:07.544Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:59:07.545Z [cache] info: Using local cache file... 
+2022-04-29T13:59:09.269Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:59:42.453Z [api] info: Regions emissions factors API request started 
+2022-04-29T13:59:42.455Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T13:59:42.456Z [cache] info: Using local cache file... 
+2022-04-29T13:59:42.455Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T13:59:43.545Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:15:19.575Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T14:15:49.767Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:15:49.787Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:15:49.787Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:15:49.798Z [cache] info: Using local cache file... 
+2022-04-29T14:15:50.865Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:29:05.862Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T14:29:10.639Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:29:10.664Z [cache] info: Using local cache file... 
+2022-04-29T14:29:10.655Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:29:10.655Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:29:11.760Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:33:37.387Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:33:37.391Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:33:37.395Z [cache] info: Using local cache file... 
+2022-04-29T14:33:37.392Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:33:38.525Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:46:53.577Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T14:46:59.488Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:46:59.504Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:46:59.504Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:46:59.528Z [cache] info: Using local cache file... 
+2022-04-29T14:47:00.611Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:47:52.033Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:47:52.037Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:47:52.040Z [cache] info: Using local cache file... 
+2022-04-29T14:47:52.038Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:47:53.136Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:51:15.273Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:51:15.295Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:51:15.298Z [cache] info: Using local cache file... 
+2022-04-29T14:51:15.296Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:51:16.401Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:56:27.893Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:56:27.898Z [cache] info: Using local cache file... 
+2022-04-29T14:56:27.896Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:56:27.896Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:56:29.006Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:59:04.649Z [api] info: Regions emissions factors API request started 
+2022-04-29T14:59:04.655Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T14:59:04.658Z [cache] info: Using local cache file... 
+2022-04-29T14:59:04.655Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T14:59:05.725Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:15:18.879Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T15:15:33.606Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:15:33.638Z [cache] info: Using local cache file... 
+2022-04-29T15:15:33.619Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:15:33.620Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:15:34.726Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:15:42.375Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:15:42.381Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:15:42.381Z [cache] info: Using local cache file... 
+2022-04-29T15:15:42.381Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:15:43.493Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:22:27.502Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T15:22:32.101Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:22:32.128Z [cache] info: Using local cache file... 
+2022-04-29T15:22:32.115Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:22:32.115Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:22:33.204Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:22:43.438Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:22:43.443Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:22:43.444Z [cache] info: Using local cache file... 
+2022-04-29T15:22:43.443Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:22:44.555Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:10.882Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:10.894Z [cache] info: Using local cache file... 
+2022-04-29T15:27:10.887Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:27:10.888Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:27:11.982Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:15.274Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:15.275Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:27:15.277Z [cache] info: Using local cache file... 
+2022-04-29T15:27:15.275Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:27:16.358Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:20.488Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:20.495Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:27:20.497Z [cache] info: Using local cache file... 
+2022-04-29T15:27:20.495Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:27:21.580Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:25.658Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:25.662Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:27:25.664Z [cache] info: Using local cache file... 
+2022-04-29T15:27:25.662Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:27:26.746Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:37.417Z [api] info: Recommendations API request started 
+2022-04-29T15:27:37.422Z [api] info: Footprint API request started with Start Date: 2022-03-29 and End Date: 2022-04-29 
+2022-04-29T15:27:37.422Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:27:37.426Z [cache] info: Ignoring cache... 
+2022-04-29T15:27:44.342Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:27:44.344Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:27:44.345Z [cache] info: Using local cache file... 
+2022-04-29T15:27:44.345Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:27:45.406Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:29:48.088Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:29:48.092Z [cache] info: Using local cache file... 
+2022-04-29T15:29:48.089Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:29:48.096Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:29:49.179Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:29:52.769Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:29:52.773Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:29:52.775Z [cache] info: Using local cache file... 
+2022-04-29T15:29:52.773Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:29:53.854Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:29:59.728Z [api] info: Regions emissions factors API request started 
+2022-04-29T15:29:59.739Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T15:29:59.739Z [cache] info: Using local cache file... 
+2022-04-29T15:29:59.739Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T15:30:00.830Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:13:35.688Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:13:35.694Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:13:35.697Z [cache] info: Using local cache file... 
+2022-04-29T16:13:35.694Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:13:37.037Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:13:40.372Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:13:40.373Z [cache] info: Using local cache file... 
+2022-04-29T16:13:40.373Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:13:40.373Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:13:42.067Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:14:01.610Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:14:01.614Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:14:01.616Z [cache] info: Using local cache file... 
+2022-04-29T16:14:01.614Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:14:02.709Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:14:09.158Z [api] info: Footprint API request started with Start Date: 2022-03-29 and End Date: 2022-04-29 
+2022-04-29T16:14:09.160Z [cache] info: Ignoring cache... 
+2022-04-29T16:14:09.159Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:14:09.163Z [api] info: Recommendations API request started 
+2022-04-29T16:14:11.776Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:14:11.778Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:14:11.779Z [cache] info: Using local cache file... 
+2022-04-29T16:14:11.778Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:14:12.834Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:17:56.759Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:17:56.762Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:17:56.763Z [cache] info: Using local cache file... 
+2022-04-29T16:17:56.762Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:17:57.846Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:18:03.841Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:18:03.847Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:18:03.847Z [cache] info: Using local cache file... 
+2022-04-29T16:18:03.847Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:18:04.931Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:18:09.628Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:18:09.633Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:18:09.633Z [cache] info: Using local cache file... 
+2022-04-29T16:18:09.633Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:18:13.337Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:18:13.346Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:18:13.347Z [cache] info: Using local cache file... 
+2022-04-29T16:18:13.347Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:18:14.420Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:20:50.878Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:20:50.880Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:20:50.881Z [cache] info: Using local cache file... 
+2022-04-29T16:20:50.880Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:20:51.954Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:10.313Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:10.316Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:21:10.316Z [cache] info: Using local cache file... 
+2022-04-29T16:21:10.316Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:21:11.422Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:16.388Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:16.393Z [cache] info: Using local cache file... 
+2022-04-29T16:21:16.391Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:21:16.391Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:21:16.910Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:16.913Z [cache] info: Using local cache file... 
+2022-04-29T16:21:16.912Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:21:16.912Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:21:18.018Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:22.313Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:22.314Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:21:22.315Z [cache] info: Using local cache file... 
+2022-04-29T16:21:22.314Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:21:26.836Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:32.835Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:32.846Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:21:32.847Z [cache] info: Using local cache file... 
+2022-04-29T16:21:32.846Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:21:47.316Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:21:47.325Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:21:47.326Z [cache] info: Using local cache file... 
+2022-04-29T16:21:47.325Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:21:50.566Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:25:36.996Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T16:25:38.919Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:25:38.959Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:25:38.959Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:25:38.990Z [cache] info: Using local cache file... 
+2022-04-29T16:25:40.268Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:26:00.890Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:26:00.891Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:26:00.892Z [cache] info: Using local cache file... 
+2022-04-29T16:26:00.891Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:26:02.008Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:26:17.805Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:26:17.813Z [cache] info: Using local cache file... 
+2022-04-29T16:26:17.810Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:26:17.810Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:26:18.878Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:26:22.570Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:26:22.575Z [api] info: Footprint API request started with Start Date: 2021-04-29 and End Date: 2022-04-29 
+2022-04-29T16:26:22.582Z [cache] info: Using local cache file... 
+2022-04-29T16:26:22.576Z [api] warn: GroupBy parameter not specified. This will be required in the future. 
+2022-04-29T16:26:23.684Z [api] info: Regions emissions factors API request started 
+2022-04-29T16:30:08.104Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T16:31:14.159Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 
+2022-04-29T16:32:42.346Z [server] info: Cloud Carbon Footprint Server listening at http://localhost:4000 

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eeb2d826.css",
+    "main.js": "/static/js/main.17ad6201.js",
+    "static/media/AzureMap.png": "/static/media/AzureMap.c1d45f90015c5770046a.png",
+    "static/media/GCPMap.png": "/static/media/GCPMap.6b0bdba88af2fc1a67dc.png",
+    "static/media/AWSMap.png": "/static/media/AWSMap.07d159fa6e3e01b50926.png",
+    "static/media/V1Shrugging-cloud-icon.svg": "/static/media/V1Shrugging-cloud-icon.46eb4c33a3c7d4f32ad5daea465e000e.svg",
+    "static/media/V1Empty-state-generic-icon.svg": "/static/media/V1Empty-state-generic-icon.c17cf7e03d15f623c28e433c63761795.svg",
+    "static/media/loading.svg": "/static/media/loading.330b7d99bfbae8039a5456998d97914f.svg",
+    "index.html": "/index.html",
+    "main.eeb2d826.css.map": "/static/css/main.eeb2d826.css.map",
+    "main.17ad6201.js.map": "/static/js/main.17ad6201.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eeb2d826.css",
+    "static/js/main.17ad6201.js"
+  ]
+}

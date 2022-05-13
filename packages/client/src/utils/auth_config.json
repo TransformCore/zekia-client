@@ -1,0 +1,7 @@
+{
+  "domain": "dev-cfp.eu.auth0.com",
+  "clientId": "nDd55EBq1Fvd5d1yQEhaLoD5rTV36fuc",
+  "audience": "",
+  "appOrigin": "http://localhost:3000",
+  "apiOrigin": "http://localhost:3001"
+}
