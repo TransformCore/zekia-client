@@ -64,7 +64,7 @@ workflows:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
 
-          context: myContext
+          context: devops-445220836204
           executor: aws-ecr/default
 
           extra-build-args: "--compress"
