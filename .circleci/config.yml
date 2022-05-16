@@ -1,81 +1,16 @@
 version: 2.1
+setup: true
 
 orbs:
-  aws-ecr: circleci/aws-ecr@8.1.2
-  aws-cli: circleci/aws-cli@3.1.1
-
-executors:
-  client:
-    resource_class: small
-    working_directory: ~/packages/client
-    docker:
-      - image: node:lts-alpine3.15
-
-jobs:
-  build_client:
-    executor: client
-    steps:
-      - checkout
-      - run:
-          name: Install Dependencies
-          command: yarn
-      - run:
-          name: Build Project
-          command: yarn build
-      - persist_to_workspace:
-          root: .
-          paths:
-            - .
-
-  deploy_client:
-    executor: aws-cli/default
-    steps:
-      - attach_workspace:
-          at: .
-      - aws-cli/setup:
-          aws-region: AWS_REGION
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-      - run:
-          name: Upload to S3
-          command: aws s3 sync ./build/ s3://$S3_BUCKET --delete
+  path-filtering: circleci/path-filtering@0.1.2
 
 workflows:
   version: 2
-  build_and_push_s3:
+  generate-config:
     jobs:
-      - build_client:
-          context: devops-445220836204
-          filters:
-            branches:
-              only: main
-
-      - deploy_client:
-          context: devops-445220836204
-          requires:
-            - build_client
-          filters:
-            branches:
-              only: main
-
-  build_and_push_image:
-    jobs:
-      - aws-ecr/build-and-push-image:
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-
-          context: devops-445220836204
-          executor: aws-ecr/default
-
-          extra-build-args: "--compress"
-          no-output-timeout: 20m
-          path: ./packages/api/Dockerfile
-          platform: linux/amd64
-          profile-name: circleci
-          public-registry: false
-
-          region: AWS_REGION
-          registry-id: AWS_ECR_REGISTRY_ID
-          repo: ECR_REPO_NAME
-          repo-scan-on-push: true
-          skip-when-tags-exist: false
+      - path-filtering/filter:
+          base-revision: main
+          config-path: .circleci/continue_config.yml
+          mapping: |
+            packages/client/.* build_and_push_s3 true
+            packages/api/.* build_and_push_ecr true
