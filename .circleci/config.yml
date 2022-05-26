@@ -45,4 +45,4 @@ workflows:
           pre-steps:
             - run:
                 command: |
-                  echo '{ "build_and_push_s": << pipeline.parameters.manual_build_and_push_s3 >>, "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >> }' >> /tmp/pipeline-parameters.json
+                  echo '{ "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>, "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >> }' >> /tmp/pipeline-parameters.json
