@@ -33,9 +33,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: See where we are
-          command: pwd && ls
-      - run:
           name: Install Dependencies
           command: cd packages/client && yarn
       - run:
