@@ -42,9 +42,9 @@ jobs:
       - attach_workspace:
           at: .
       - aws-cli/setup:
-          aws-region: $AWS_REGION
-          aws-access-key-id: $AWS_ACCESS_KEY_ID
-          aws-secret-access-key: $AWS_SECRET_ACCESS_KEY
+          aws-region: AWS_REGION
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
           command: aws s3 sync ./build/ s3://$S3_BUCKET --delete
@@ -72,8 +72,8 @@ workflows:
     when: << pipeline.parameters.build_and_push_ecr >>
     jobs:
       - aws-ecr/build-and-push-image:
-          aws-access-key-id: $AWS_ACCESS_KEY_ID
-          aws-secret-access-key: $AWS_SECRET_ACCESS_KEY
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
 
           context: zekia
           executor: aws-ecr/default
@@ -85,8 +85,8 @@ workflows:
           profile-name: circleci
           public-registry: false
 
-          region: $AWS_REGION
-          registry-id: $AWS_ACCOUNT_ID
-          repo: $ECR_REPO_NAME
+          region: AWS_REGION
+          registry-id: AWS_ACCOUNT_ID
+          repo: ECR_REPO_NAME
           repo-scan-on-push: true
           skip-when-tags-exist: false
