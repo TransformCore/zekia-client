@@ -30,12 +30,12 @@ parameters:
 jobs:
   build_client:
     executor: client
-    working_directory: ./packages/client
+    working_directory: ~/internal-cloud-carbon-transformation/packages/client
     steps:
       - checkout
       - run:
           name: See where we are
-          command: cat package.json
+          command: pwd && cat package.json
       - run:
           name: Install Dependencies
           command: yarn
@@ -49,7 +49,7 @@ jobs:
 
   deploy_client:
     executor: aws-cli/default
-    working_directory: ./packages/client
+    working_directory: ~/internal-cloud-carbon-transformation/packages/client
     steps:
       - attach_workspace:
           at: .
