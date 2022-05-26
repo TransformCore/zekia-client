@@ -30,18 +30,17 @@ parameters:
 jobs:
   build_client:
     executor: client
-    working_directory: ~/internal-cloud-carbon-transformation/packages/client
     steps:
       - checkout
       - run:
           name: See where we are
-          command: pwd && cat package.json
+          command: pwd && ls
       - run:
           name: Install Dependencies
-          command: yarn
+          command: cd packages/client && yarn
       - run:
           name: Build Project
-          command: yarn build
+          command: cd packages/client && yarn build
       - persist_to_workspace:
           root: .
           paths:
@@ -49,7 +48,6 @@ jobs:
 
   deploy_client:
     executor: aws-cli/default
-    working_directory: ~/internal-cloud-carbon-transformation/packages/client
     steps:
       - attach_workspace:
           at: .
@@ -59,7 +57,7 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: aws s3 sync ./build/ s3://$S3_BUCKET --delete
+          command: cd packages/client && aws s3 sync ./build/ s3://$S3_BUCKET --delete
 
 workflows:
   version: 2
