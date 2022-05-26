@@ -20,6 +20,14 @@ parameters:
     type: boolean
     default: false
 
+  manual_build_and_push_s3:
+    type: boolean
+    default: false
+
+  manual_build_and_push_ecr:
+    type: boolean
+    default: false
+
 jobs:
   build_client:
     executor: client
@@ -52,7 +60,12 @@ jobs:
 workflows:
   version: 2
   build_and_push_s3:
-    when: << pipeline.parameters.build_and_push_s3 >>
+    when:
+      or:
+        [
+          << pipeline.parameters.manual_build_and_push_s3 >>,
+          << pipeline.parameters.build_and_push_s3 >>,
+        ]
     jobs:
       - build_client:
           context: zekia
@@ -69,7 +82,12 @@ workflows:
               only: main
 
   build_and_push_ecr:
-    when: << pipeline.parameters.build_and_push_ecr >>
+    when:
+      or:
+        [
+          << pipeline.parameters.manual_build_and_push_ecr >>,
+          << pipeline.parameters.build_and_push_ecr >>,
+        ]
     jobs:
       - aws-ecr/build-and-push-image:
           aws-access-key-id: AWS_ACCESS_KEY_ID
