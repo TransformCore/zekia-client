@@ -34,6 +34,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: See where we are
+          command: cat package.json
+      - run:
           name: Install Dependencies
           command: yarn
       - run:
