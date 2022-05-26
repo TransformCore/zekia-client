@@ -69,9 +69,6 @@ workflows:
     jobs:
       - build_client:
           context: zekia
-          filters:
-            branches:
-              only: main
 
       - deploy_client:
           context: zekia
