@@ -7,7 +7,6 @@ orbs:
 executors:
   client:
     resource_class: small
-    working_directory: ./packages/client
     docker:
       - image: node:16-alpine3.15
 
@@ -31,6 +30,7 @@ parameters:
 jobs:
   build_client:
     executor: client
+    working_directory: ./packages/client
     steps:
       - checkout
       - run:
@@ -49,6 +49,7 @@ jobs:
 
   deploy_client:
     executor: aws-cli/default
+    working_directory: ./packages/client
     steps:
       - attach_workspace:
           at: .
