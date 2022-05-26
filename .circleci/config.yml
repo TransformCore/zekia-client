@@ -41,8 +41,9 @@ workflows:
     jobs:
       - continuation/continue:
           configuration_path: .circleci/continue_config.yml
-          parameters: /tmp/pipeline_parameters.json
-          pre-steps:
-            - run:
-                command: |
-                  echo '{ "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>, "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >> }' >> /tmp/pipeline-parameters.json
+          # building them in parameters as using a file is broken in the orb
+          parameters: |
+            '{
+              "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>,
+              "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >>
+            }'

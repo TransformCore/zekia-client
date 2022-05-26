@@ -50,7 +50,7 @@
     "build:app": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "build:workspace": "mkdir -p ../../dist-workspace/packages/client/build && cp -R build ../../dist-workspace/packages/client && cp package.json ../../dist-workspace/packages/client && cp index.js ../../dist-workspace/packages/client",
     "build:update": "node ../../scripts/update-package-dependencies.js client common",
-    "build": "rimraf dist && tsc --build tsconfig.json && yarn prepack && cp package.json dist/ && copyfiles -u 1 src/**/*.svg src/**/*.png dist/ && yarn postpack",
+    "build": "rimraf dist && mkdir -p dist && tsc --build tsconfig.json && yarn prepack && cp package.json dist/ && copyfiles -u 1 src/**/*.svg src/**/*.png dist/ && yarn postpack",
     "test": "react-scripts --expose-gc test --watchAll=false",
     "test:snapshot": "yarn test -u",
     "eject": "react-scripts eject",
@@ -58,7 +58,9 @@
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix ./src/",
     "start-stub-server": "json-server stub-server/mockData.json --port 4000 --routes stub-server/routes.json",
     "start:webprod": "node index.js",
-    "clean": "rimraf build && rimraf coverage && rimraf logs"
+    "clean": "rimraf build && rimraf coverage && rimraf logs",
+    "prepack": "ts-node ../../scripts/prepack.ts",
+    "postpack": "ts-node ../../scripts/postpack.ts"
   },
   "browserslist": {
     "production": [
