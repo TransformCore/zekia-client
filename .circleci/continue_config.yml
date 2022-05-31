@@ -41,7 +41,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - .
+            - packages/client/build
 
   deploy_client:
     executor: aws-cli/default
@@ -54,7 +54,7 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: cd packages/client && aws s3 sync ./build/ s3://$S3_BUCKET --delete
+          command: aws s3 sync . s3://$S3_BUCKET --delete
 
 workflows:
   version: 2
@@ -73,9 +73,9 @@ workflows:
           context: zekia
           requires:
             - build_client
-          filters:
-            branches:
-              only: main
+          # filters:
+          #   branches:
+          #     only: main
 
   build_and_push_ecr:
     when:
