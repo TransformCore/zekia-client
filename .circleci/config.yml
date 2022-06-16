@@ -25,7 +25,8 @@ parameters:
 jobs:
   finish:
     docker:
-      - image: cimg/base
+      - image: cimg/base:stable
+    resource_class: small
     steps:
       - run: continuation/finish
 
