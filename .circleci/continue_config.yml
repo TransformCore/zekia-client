@@ -56,6 +56,13 @@ jobs:
           name: Upload to S3
           command: aws s3 sync . s3://$S3_BUCKET --delete
 
+  finish:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - run: echo "All workflows filtered."
+
 workflows:
   version: 2
   build_and_push_s3:
@@ -104,3 +111,13 @@ workflows:
           repo: ECR_REPO_NAME
           repo-scan-on-push: true
           skip-when-tags-exist: false
+
+  finish:
+    when:
+      and:
+        - equal: [false, << pipeline.parameters.build_and_push_s3 >>]
+        - equal: [false, << pipeline.parameters.build_and_push_ecr >>]
+        - equal: [false, << pipeline.parameters.manual_build_and_push_s3 >>]
+        - equal: [false, << pipeline.parameters.manual_build_and_push_ecr >>]
+    jobs:
+      - finish
