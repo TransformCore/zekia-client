@@ -45,6 +45,14 @@ workflows:
           mapping: |
             packages/client/.* build_and_push_s3 true
             packages/api/.* build_and_push_ecr true
+      - finish:
+        when:
+          and:
+            - equal: [false, << pipeline.parameters.build_and_push_s3 >>]
+            - equal: [false, << pipeline.parameters.build_and_push_ecr >>]
+            - equal: [false, << pipeline.parameters.manual_build_and_push_s3 >>]
+            - equal:
+                [false, << pipeline.parameters.manual_build_and_push_ecr >>]
 
   manual-run:
     when:
@@ -62,13 +70,3 @@ workflows:
               "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>,
               "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >>
             }'
-
-  finish:
-    when:
-      and:
-        - equal: [false, << pipeline.parameters.build_and_push_s3 >>]
-        - equal: [false, << pipeline.parameters.build_and_push_ecr >>]
-        - equal: [false, << pipeline.parameters.manual_build_and_push_s3 >>]
-        - equal: [false, << pipeline.parameters.manual_build_and_push_ecr >>]
-    jobs:
-      - finish
