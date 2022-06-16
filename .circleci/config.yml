@@ -22,6 +22,14 @@ parameters:
     type: boolean
     default: false
 
+jobs:
+  finish:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - continuation/finish
+
 workflows:
   version: 2
   generate-config:
@@ -38,7 +46,7 @@ workflows:
           mapping: |
             packages/client/.* build_and_push_s3 true
             packages/api/.* build_and_push_ecr true
-      - continuation/finish:
+      - finish:
         when:
           and:
             - equal: [false, << pipeline.parameters.build_and_push_s3 >>]
