@@ -104,7 +104,7 @@ workflows:
           public-registry: false
 
           registry-id: AWS_ACCOUNT_ID
-          repo: ECR_REPO_NAME
+          repo: ${ECR_REPO_NAME}
           repo-scan-on-push: true
           skip-when-tags-exist: false
 
