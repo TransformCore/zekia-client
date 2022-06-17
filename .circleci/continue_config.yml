@@ -93,9 +93,6 @@ workflows:
         ]
     jobs:
       - aws-ecr/build-and-push-image:
-          aws-access-key-id: ${AWS_ACCESS_KEY_ID}
-          aws-secret-access-key: ${AWS_SECRET_ACCESS_KEY}
-
           context: zekia
           executor: aws-ecr/default
 
@@ -106,9 +103,8 @@ workflows:
           profile-name: circleci
           public-registry: false
 
-          region: ${AWS_REGION}
-          registry-id: ${AWS_ACCOUNT_ID}
-          repo: ${ECR_REPO_NAME}
+          registry-id: AWS_ACCOUNT_ID
+          repo: ECR_REPO_NAME
           repo-scan-on-push: true
           skip-when-tags-exist: false
 
