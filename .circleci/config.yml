@@ -59,7 +59,8 @@ workflows:
           << pipeline.parameters.manual_build_and_push_ecr >>,
         ]
     jobs:
-      - echo
+      - echo:
+          parameters: << pipeline.parameters >>
       # - continuation/continue:
       #     configuration_path: .circleci/continue_config.yml
       #     # building them in parameters as using a file is broken in the orb
