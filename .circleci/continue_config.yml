@@ -80,9 +80,9 @@ workflows:
           context: zekia
           requires:
             - build_client
-          # filters:
-          #   branches:
-          #     only: main
+          filters:
+            branches:
+              only: main
 
   build_and_push_ecr:
     when:
