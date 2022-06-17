@@ -20,7 +20,19 @@ jobs:
       - image: cimg/base:stable
     resource_class: small
     steps:
-      - run: echo "$PARAMETERS"
+      - run: echo "<< pipeline.parameters >>"
+      - run: |
+          echo "{
+              "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>,
+              "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >>
+            }"
+      - continuation/continue:
+          configuration_path: .circleci/continue_config.yml
+          parameters: |
+            {
+              "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>,
+              "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >>
+            }
 
 workflows:
   version: 2
@@ -48,11 +60,11 @@ workflows:
         ]
     jobs:
       - echo
-      - continuation/continue:
-          configuration_path: .circleci/continue_config.yml
-          # building them in parameters as using a file is broken in the orb
-          parameters: |
-            '{
-              "build_and_push_s3": "<< pipeline.parameters.manual_build_and_push_s3 >>",
-              "build_and_push_ecr": "<< pipeline.parameters.manual_build_and_push_ecr >>"
-            }'
+      # - continuation/continue:
+      #     configuration_path: .circleci/continue_config.yml
+      #     # building them in parameters as using a file is broken in the orb
+      #     parameters: |
+      #       '{
+      #         "build_and_push_s3": "<< pipeline.parameters.manual_build_and_push_s3 >>",
+      #         "build_and_push_ecr": "<< pipeline.parameters.manual_build_and_push_ecr >>"
+      #       }'
