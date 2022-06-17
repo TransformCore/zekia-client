@@ -37,24 +37,31 @@ jobs:
           command: cd packages/client && yarn
       - run:
           name: Build Project
-          command: cd packages/client && yarn build
+          command: cd packages/client && yarn build:app
       - persist_to_workspace:
-          root: .
+          root: ~/project
           paths:
-            - .
+            - packages/client/build
 
   deploy_client:
     executor: aws-cli/default
     steps:
       - attach_workspace:
-          at: .
+          at: ~/project
       - aws-cli/setup:
           aws-region: AWS_REGION
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: cd packages/client && aws s3 sync ./build/ s3://$S3_BUCKET --delete
+          command: aws s3 sync ~/project/packages/client/build s3://$S3_BUCKET --delete
+
+  finish:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - run: echo "All workflows filtered."
 
 workflows:
   version: 2
@@ -104,3 +111,13 @@ workflows:
           repo: ECR_REPO_NAME
           repo-scan-on-push: true
           skip-when-tags-exist: false
+
+  finish:
+    when:
+      and:
+        - equal: [false, << pipeline.parameters.build_and_push_s3 >>]
+        - equal: [false, << pipeline.parameters.build_and_push_ecr >>]
+        - equal: [false, << pipeline.parameters.manual_build_and_push_s3 >>]
+        - equal: [false, << pipeline.parameters.manual_build_and_push_ecr >>]
+    jobs:
+      - finish
