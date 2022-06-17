@@ -98,7 +98,7 @@ workflows:
 
           extra-build-args: "--compress"
           no-output-timeout: 20m
-          path: ./packages/api/Dockerfile
+          path: ~/project/packages/api/Dockerfile
           platform: linux/amd64
           profile-name: circleci
           public-registry: false
