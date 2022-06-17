@@ -37,7 +37,7 @@ jobs:
           command: cd packages/client && yarn
       - run:
           name: Build Project
-          command: cd packages/client && yarn build
+          command: cd packages/client && yarn build:app
       - persist_to_workspace:
           root: ~/project
           paths:
