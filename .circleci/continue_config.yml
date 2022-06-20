@@ -94,14 +94,13 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           context: zekia
+          dockerfile: packages/api/Dockerfile
           executor: aws-ecr/default
           extra-build-args: "--compress"
           no-output-timeout: 20m
-          path: ~/project/packages/api
           platform: linux/amd64
           profile-name: circleci
           public-registry: false
-
           registry-id: AWS_ACCOUNT_ID
           repo: ${ECR_REPO_NAME}
           repo-scan-on-push: true
