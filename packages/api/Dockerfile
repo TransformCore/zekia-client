@@ -1,7 +1,9 @@
+FROM node:14-alpine as build
+COPY ../../ .
+RUN cd ./packages/api && yarn install --immutable && yarn build && rm -rf core
+
 FROM node:14-alpine
-WORKDIR /usr/src/app
-RUN yarn build && \
-  yarn install --immutable && \
-  rm -rf core
+WORKDIR /usr/app
+COPY --from=build ./packages/api/dist /usr/app/dist
 
 CMD [ "yarn", "start:webprod"]
