@@ -13,7 +13,8 @@ import { createRouter } from './api'
 import auth from './auth'
 import { Logger } from '@cloud-carbon-footprint/common'
 
-const port = process.env.PORT || 4000
+const port = parseInt(process.env.PORT) || 4000
+const host = process.env.HOSTNAME || '0.0.0.0'
 const httpApp = express()
 const serverLogger = new Logger('server')
 
@@ -25,8 +26,8 @@ httpApp.use(helmet())
 
 httpApp.use('/api', createRouter())
 
-httpApp.listen(port, '0.0.0.0', null, () =>
+httpApp.listen(port, host, null, () =>
   serverLogger.info(
-    `Cloud Carbon Footprint Server listening at http://localhost:${port}`,
+    `Cloud Carbon Footprint Server listening at http://${host}:${port}`,
   ),
 )

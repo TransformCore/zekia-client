@@ -95,10 +95,9 @@ workflows:
       - aws-ecr/build-and-push-image:
           context: zekia
           executor: aws-ecr/default
-
           extra-build-args: "--compress"
           no-output-timeout: 20m
-          path: ~/project/packages/api/Dockerfile
+          path: ~/project/packages/api
           platform: linux/amd64
           profile-name: circleci
           public-registry: false
