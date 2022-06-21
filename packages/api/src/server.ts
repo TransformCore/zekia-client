@@ -27,6 +27,6 @@ httpApp.use('/api', createRouter())
 
 httpApp.listen(port, () =>
   serverLogger.info(
-    `Cloud Carbon Footprint Server listening at http://${host}:${port}`,
+    `Cloud Carbon Footprint Server listening on port ${port}.`,
   ),
 )
