@@ -13,7 +13,7 @@ import { createRouter } from './api'
 import auth from './auth'
 import { Logger } from '@cloud-carbon-footprint/common'
 
-const port = parseInt(process.env.PORT) || 4000
+const port = parseInt(process.env.PORT) || 80
 const host = process.env.HOSTNAME || '0.0.0.0'
 const httpApp = express()
 const serverLogger = new Logger('server')
