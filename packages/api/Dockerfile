@@ -1,6 +1,7 @@
 # to build typescript
 FROM node:14-alpine as build
 COPY ../../ .
+RUN echo //npm.pkg.github.com/:_authToken=$GITHUB_TOKEN >> ~/.npmrc
 RUN cd ./packages/api && yarn install --immutable && yarn build && rm -rf core
 
 # to run the api
