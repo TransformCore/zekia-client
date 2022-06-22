@@ -126,5 +126,10 @@ export const createRouter = (config?: CCFConfig) => {
     res.status(200).send('OK')
   })
 
+  // to check if environment variables are set
+  router.get('/aws-auth-mode', (req: express.Request, res: express.Response) => {
+    res.status(200).send(process.env.AWS_AUTH_MODE)
+  })
+
   return router
 }
