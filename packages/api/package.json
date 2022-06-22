@@ -77,6 +77,9 @@
     "helmet": "^5.0.1",
     "module-alias": "^2.2.2"
   },
+  "resolutions": {
+    "@cloud-carbon-footprint/aws": "npm:@transformcore/cloud-carbon-footprint@0.11.1"
+  },
   "lint-staged": {
     "*.{js,ts}": [
       "yarn lint"
