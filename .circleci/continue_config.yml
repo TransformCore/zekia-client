@@ -108,6 +108,10 @@ workflows:
           repo-scan-on-push: true
           skip-when-tags-exist: false
 
+          filters:
+            branches:
+              only: main
+
   finish:
     when:
       and:
