@@ -78,7 +78,7 @@
     "module-alias": "^2.2.2"
   },
   "resolutions": {
-    "@cloud-carbon-footprint/aws": "npm:@chriscoffee/cloud-carbon-footprint@0.11.1"
+    "@cloud-carbon-footprint/aws": "npm:@chriscoffee/cloud-carbon-footprint-aws@0.11.1"
   },
   "lint-staged": {
     "*.{js,ts}": [
