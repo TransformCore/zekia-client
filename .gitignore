@@ -276,3 +276,5 @@ screenshots
 
 #Create App
 packages/create-app/ccf-app
+.envrc
+.direnv/

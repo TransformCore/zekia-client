@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
 
 httpApp.use(helmet())
 
-httpApp.use('/api', createRouter())
+httpApp.use('/', createRouter())
 
 httpApp.listen(port, () =>
   serverLogger.info(

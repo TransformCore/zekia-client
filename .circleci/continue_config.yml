@@ -38,6 +38,8 @@ jobs:
       - run:
           name: Build Project
           command: cd packages/client && yarn build:app
+          environment:
+            REACT_APP_BASE_URL: api.zekia.io
       - persist_to_workspace:
           root: ~/project
           paths:
