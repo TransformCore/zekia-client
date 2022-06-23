@@ -72,14 +72,14 @@
   "dependencies": {
     "@cloud-carbon-footprint/app": "^0.6.0",
     "@cloud-carbon-footprint/common": "^1.5.1",
-    "@chriscoffee/cloud-carbon-footprint-app": "0.6.2",
+    "@chriscoffee/cloud-carbon-footprint-app": "0.6.3",
     "@types/express": "^4.17.12",
     "express": "^4.17.1",
     "helmet": "^5.0.1",
     "module-alias": "^2.2.2"
   },
   "resolutions": {
-    "@cloud-carbon-footprint/app": "npm:@chriscoffee/cloud-carbon-footprint-app@0.6.2"
+    "@cloud-carbon-footprint/app": "npm:@chriscoffee/cloud-carbon-footprint-app@0.6.3"
   },
   "lint-staged": {
     "*.{js,ts}": [
