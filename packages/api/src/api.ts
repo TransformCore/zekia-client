@@ -9,8 +9,8 @@ import {
   CreateValidFootprintRequest,
   CreateValidRecommendationsRequest,
   FootprintEstimatesRawRequest,
-  RecommendationsRawRequest,
-} from '@cloud-carbon-footprint/app'
+  RecommendationsRawRequest
+} from '@chriscoffee/cloud-carbon-footprint-app'
 
 import {
   setConfig,

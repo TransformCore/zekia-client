@@ -11,6 +11,6 @@ FROM node:14-alpine
 WORKDIR /usr/app
 COPY --from=build ./packages/api/dist ./dist
 COPY --from=build ./packages/api/package.json .
-RUN yarn install --immutable
+RUN yarn install --immutable --prod
 
 CMD [ "yarn", "start:webprod"]
