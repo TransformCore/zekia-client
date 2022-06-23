@@ -8,6 +8,7 @@ if (process.env.NODE_ENV === 'production') {
 
 import express from 'express'
 import helmet from 'helmet'
+import cors from 'cors'
 
 import { createRouter } from './api'
 import auth from './auth'
@@ -17,16 +18,21 @@ const port = parseInt(process.env.PORT) || 80
 const httpApp = express()
 const serverLogger = new Logger('server')
 
+const corsOptions = {
+  origin: 'https://zekia.io',
+  optionsSuccessStatus: 200
+}
+
 if (process.env.NODE_ENV === 'production') {
   httpApp.use(auth)
 }
 
 httpApp.use(helmet())
-
+httpApp.use(cors(corsOptions))
 httpApp.use('/', createRouter())
 
 httpApp.listen(port, () =>
   serverLogger.info(
-    `Cloud Carbon Footprint Server listening on port ${port}.`,
+    `Zekia Server listening on port ${port}.`,
   ),
 )
