@@ -33,11 +33,11 @@ const RecommondationsHeaderBar = (): ReactElement => {
         <NavLink to="/" className={classes.title}>
           <img
             src={logo}
-            alt={'Cloud Carbon Footprint Logo'}
+            alt={'Zekia Logo'}
             className={classes.logo}
           />
           <Typography component="h1" variant="h5">
-            Cloud Carbon Footprint
+            Zekia
           </Typography>
         </NavLink>
         <NavLink to="/"> </NavLink>
@@ -72,4 +72,3 @@ const RecommondationsHeaderBar = (): ReactElement => {
 }
 
 export default RecommondationsHeaderBar
-

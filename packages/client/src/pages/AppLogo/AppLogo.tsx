@@ -7,7 +7,7 @@ const AppLogo = () => {
         <div>
             <img
                 src={logo}
-                alt={'Cloud Carbon Footprint Logo'}
+                alt={'Zekia Logo'}
                 className={classes.logo} />
         </div>
     );

@@ -2,7 +2,7 @@
   "name": "@cloud-carbon-footprint/client-template",
   "version": "0.8.0",
   "license": "Apache-2.0",
-  "description": "The front-end dashboard for Cloud Carbon Footprint.",
+  "description": "The front-end dashboard for Zekia.",
   "homepage": "https://www.cloudcarbonfootprint.org/",
   "repository": {
     "type": "git",

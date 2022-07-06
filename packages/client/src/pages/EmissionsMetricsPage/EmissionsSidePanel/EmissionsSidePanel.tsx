@@ -35,7 +35,7 @@ export const Methodology: FunctionComponent = () => {
       </Typography>
       <Divider />
       <Typography className={classes.content} component="p">
-        Cloud Carbon Footprint includes CO2e emissions estimates for cloud
+        Zekia includes CO2e emissions estimates for cloud
         compute, storage, networking and memory.
         <br />
         <br />
