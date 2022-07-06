@@ -56,7 +56,7 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: aws s3 sync ~/project/packages/client/build s3://$S3_BUCKET --delete
+          command: aws s3 sync ~/project/packages/client/build s3://$S3_BUCKET --delete --acl public-read
 
   finish:
     docker:
