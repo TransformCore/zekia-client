@@ -10,7 +10,7 @@ import {
   CreateValidRecommendationsRequest,
   FootprintEstimatesRawRequest,
   RecommendationsRawRequest
-} from '@chriscoffee/cloud-carbon-footprint-app'
+} from '@cloud-carbon-footprint/app'
 
 import {
   setConfig,
