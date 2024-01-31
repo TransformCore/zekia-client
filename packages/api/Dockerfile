@@ -1,5 +1,5 @@
 # to build typescript
-FROM node:14-alpine as build
+FROM node:20-alpine as build
 COPY ../../ .
 RUN cd ./packages/api && \
     yarn install --prod --immutable && \
@@ -7,7 +7,7 @@ RUN cd ./packages/api && \
     rm -rf core
 
 # to run the api
-FROM node:14-alpine
+FROM node:20-alpine
 WORKDIR /usr/app
 COPY --from=build ./packages/api/dist ./dist
 COPY --from=build ./packages/api/package.json .
