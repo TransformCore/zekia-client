@@ -1,11 +1,24 @@
 version: 2.1
-setup: true
 
 orbs:
-  path-filtering: circleci/path-filtering@0.1.3
-  continuation: circleci/continuation@0.3.0
+  aws-cli: circleci/aws-cli@4.1.2
+  aws-ecr: circleci/aws-ecr@9.0.2
+
+executors:
+  client:
+    resource_class: small
+    docker:
+      - image: node:20-alpine3.18
 
 parameters:
+  build_and_push_s3:
+    type: boolean
+    default: false
+
+  build_and_push_ecr:
+    type: boolean
+    default: false
+
   manual_build_and_push_s3:
     type: boolean
     default: false
@@ -14,36 +27,66 @@ parameters:
     type: boolean
     default: false
 
+jobs:
+  build_client:
+    executor: client
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: cd packages/client && yarn
+      - run:
+          name: Build Project
+          command: cd packages/client && yarn build:app
+          environment:
+            REACT_APP_BASE_URL: https://api.zekia.io
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - packages/client/build
+
+  deploy_client:
+    executor: aws-cli/default
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - aws-cli/setup
+      - run:
+          name: Upload to S3
+          command: aws s3 sync ~/project/packages/client/build s3://$S3_BUCKET --delete --acl public-read
+
 workflows:
   version: 2
-  generate-config:
-    unless:
-      or:
-        [
-          << pipeline.parameters.manual_build_and_push_s3 >>,
-          << pipeline.parameters.manual_build_and_push_ecr >>,
-        ]
+  build_and_push_s3:
     jobs:
-      - path-filtering/filter:
-          base-revision: main
-          config-path: .circleci/continue_config.yml
-          mapping: |
-            packages/client/.* build_and_push_s3 true
-            packages/api/.* build_and_push_ecr true
+      - build_client:
+          context: zekia
 
-  manual-run:
-    when:
-      or:
-        [
-          << pipeline.parameters.manual_build_and_push_s3 >>,
-          << pipeline.parameters.manual_build_and_push_ecr >>,
-        ]
+      - deploy_client:
+          context: zekia
+          requires:
+            - build_client
+          filters:
+            branches:
+              only: main
+
+  build_and_push_ecr:
     jobs:
-      - continuation/continue:
-          configuration_path: .circleci/continue_config.yml
-          # building them in parameters as using a file is broken in the orb
-          parameters: |
-            {
-              "build_and_push_s3": << pipeline.parameters.manual_build_and_push_s3 >>,
-              "build_and_push_ecr": << pipeline.parameters.manual_build_and_push_ecr >>
-            }
+      - aws-ecr/build_and_push_image:
+          auth:
+            - aws-cli/setup
+          context: zekia
+          dockerfile: packages/api/Dockerfile
+          executor: aws-ecr/default
+          extra_build_args: "--compress"
+          no_output_timeout: 20m
+          platform: linux/amd64
+          profile_name: circleci
+          public_registry: false
+          repo: ${ECR_REPO_NAME}
+          repo_scan_on_push: true
+          skip_when_tags_exist: false
+
+          filters:
+            branches:
+              only: main
