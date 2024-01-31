@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  aws-ecr: circleci/aws-ecr@8.1.2
-  aws-cli: circleci/aws-cli@3.1.1
+  aws-cli: circleci/aws-cli@4.1.2
+  aws-ecr: circleci/aws-ecr@9.0.2
 
 executors:
   client:
@@ -50,10 +50,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - aws-cli/setup:
-          aws-region: AWS_REGION
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+      - aws-cli/setup
       - run:
           name: Upload to S3
           command: aws s3 sync ~/project/packages/client/build s3://$S3_BUCKET --delete --acl public-read
@@ -94,19 +91,20 @@ workflows:
           << pipeline.parameters.build_and_push_ecr >>,
         ]
     jobs:
-      - aws-ecr/build-and-push-image:
+      - aws-ecr/build_and_push_image:
+          auth:
+            - aws-cli/setup
           context: zekia
           dockerfile: packages/api/Dockerfile
           executor: aws-ecr/default
-          extra-build-args: "--compress"
-          no-output-timeout: 20m
+          extra_build_args: "--compress"
+          no_output_timeout: 20m
           platform: linux/amd64
-          profile-name: circleci
-          public-registry: false
-          registry-id: AWS_ACCOUNT_ID
+          profile_name: circleci
+          public_registry: false
           repo: ${ECR_REPO_NAME}
-          repo-scan-on-push: true
-          skip-when-tags-exist: false
+          repo_scan_on_push: true
+          skip_when_tags_exist: false
 
           filters:
             branches:
